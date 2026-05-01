@@ -15,7 +15,7 @@ app.use('/api/parking', parkingRoutes);
 
 // Database Connection
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = 'mongodb+srv://anvitha7036sahyadri_db_user:KbB7QTk5nYZzwxYH@cluster0.n7qp8bj.mongodb.net/?appName=Cluster0';
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
     .then(() => {
